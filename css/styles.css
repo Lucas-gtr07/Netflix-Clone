@@ -170,7 +170,7 @@
 
   /* === Trilho com animação=== */
 
-  section {
+  .trilho-animacao {
     width: 100%;
     position: relative;
     display: grid;
@@ -198,10 +198,68 @@
 
   .item-animacao:hover  {
     margin: 0 40px;
-    transform: scale(2,1);
+    transform: scale(1.2);
   }
 
   .item-animacao {
     max-width: 100%;
     padding-left: 5px;
   }
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.item-animacao_slider {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+
+.item-animacao_slider:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+
+.item-animacao_slider img {
+  max-width: 100%;
+  padding-right: 5px;
+}
+
+.arrow__btn {
+  position:absolute;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(0,0,0);
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.arrow__btn i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.637);
+}
+
+.arrow__btn i:hover {
+  color: white;
+  transform: scale(1.15);
+}
+
+.arrow__btn:nth-of-type(1) {
+  top: -16px;
+  bottom: -10px;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.arrow__btn:nth-of-type(2) {
+  top: -16px;
+  bottom: -10px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
